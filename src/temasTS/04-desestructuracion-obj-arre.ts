@@ -25,7 +25,8 @@ const reproducto:Reproductor = {
 const{
     volumen,
     segundo,
-    cancion
+    cancion,
+    detalles
 }=reproducto
 
 const{

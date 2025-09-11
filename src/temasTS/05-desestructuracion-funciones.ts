@@ -1,4 +1,4 @@
-interface Producto{
+export interface Producto{
     nombre:string,
     precio:number
 }
@@ -25,17 +25,18 @@ function calcularISV(prductos:Producto[]):number{
 
 const articulos = [telefono,tablet];
 const isv = calcularISV(articulos);
-console.log('ISV',isv);
+console.log('ISR',isv);
 
-function calcularISV2(prductos:Producto[]):[number,number]{
+
+
+export function calcularISV2(prductos:Producto[]):[number,number]{
     let total=0;
 
     for(let producto of prductos){
         total += producto.precio;
     }
     return [total,total*0.15]
-}
-
-const[total,isv2]= calcularISV2(articulos);
+};
+const [total, isv2]= calcularISV2(articulos);
 console.log('Total:',total);
 console.log('ISR 2', isv2)
